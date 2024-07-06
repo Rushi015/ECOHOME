@@ -1,7 +1,7 @@
 {
   "name": "ecohome",
-  "homepage": "https://sms-shreyash21.github.io/ecohome/",
-  "proxy":"https://re.jrc.ec.europa.eu",
+  "homepage": "https://Rushi015.github.io/ecohome/",
+  "proxy": "https://re.jrc.ec.europa.eu",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,6 @@
     "cors": "^2.8.5",
     "crypto-browserify": "^3.12.0",
     "fs": "^0.0.1-security",
-    "gh-pages": "^5.0.0",
     "path": "^0.12.7",
     "pdfmake": "^0.2.7",
     "querystring-es3": "^0.2.1",
@@ -55,5 +54,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }

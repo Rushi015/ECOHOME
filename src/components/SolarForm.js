@@ -20,19 +20,14 @@ const SolarForm = () => {
   
   const handleSubmit = (event) => {
     event.preventDefault();
+    //axios.get(`http://127.0.0.1:5001/eco-home-proxy/us-central1/api/weather?q=${location}`)
     axios.get(`https://us-central1-eco-home-proxy.cloudfunctions.net/api/weather?q=${location}`)
       .then((response) => {
         const { lat, lon } = response.data[0];
         state = response.data[0].state;
-        // console.log(response.data) //[0].state
-        // console.log(lat,lon)
-        // console.log(state)
         const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+        //const apiUrl = `http://127.0.0.1:5001/eco-home-proxy/us-central1/api/solar?lat=${lat}&lon=${lon}`;
         const apiUrl = `https://us-central1-eco-home-proxy.cloudfunctions.net/api/solar?lat=${lat}&lon=${lon}`;
-        // var corsOptions = {
-        //   origin: 'https://re.jrc.ec.europa.eu',
-        //   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-        // }
         axios.get(apiUrl)
           .then((response) => {
             
